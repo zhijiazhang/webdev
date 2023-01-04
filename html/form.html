@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+
+    <!-- form groups together inputs and submits them together to a specified destination -->
+    <h1>Forms</h1>
+
+    <!-- action atrribute specifies where the data should be sent -->
+
+    <form action="/tacos">
+
+        <!-- input elements -> very versatile, different type attributes create different input options -->
+        <!-- placeholder atrribute tells what should go in the input -->
+        <!-- labels are text that are linked to a input -->
+
+        <label for="username"> Enter your username</label> <br>
+        <input type="text" placeholder="username" id="username"> <br> <br>
+
+        <label for="password"> Enter your password</label> <br>
+        <input type="password" placeholder="password" id="password"> <br> <br>
+
+        <label for="color">Pick a color</label> <br>
+        <input type="color" id="color"> <br> <br>
+
+        <label for="month"> Pick a month</label> <br>
+        <input type="month" id="month"> <br> <br>
+
+        <label for="number">Enter a number</label> <br>
+        <input type="number" placeholder="enter a number" id="number"> <br> <br>
+
+
+        <!-- when you have a button in a form and you don't explicitly say "don't submit the form", it will submit the form to the destination spcified in the action -->
+        <!-- just like input, button has many attributes that can change it's action  -->
+        <button type="button">
+            submit
+        </button>
+
+        <!-- can also make a submit button using input -->
+        <!-- change name of button using value -->
+        <input type="submit" value="input button" >
+
+    </form>
+
+    <!-- however if the button is outside of the form, it does nothing -->
+    <button>Button outside of form</button>
+
+</body>
+
+</html>
