@@ -22,10 +22,10 @@
         <!-- labels are text that are linked to a input -->
 
         <label for="username"> Enter your username</label> <br>
-        <input type="text" placeholder="username" id="username"> <br> <br>
+        <input type="text" placeholder="username" id="username" name="username"> <br> <br>
 
         <label for="password"> Enter your password</label> <br>
-        <input type="password" placeholder="password" id="password"> <br> <br>
+        <input type="password" placeholder="password" id="password" name="password"> <br> <br>
 
         <label for="color">Pick a color</label> <br>
         <input type="color" id="color"> <br> <br>
@@ -34,7 +34,7 @@
         <input type="month" id="month"> <br> <br>
 
         <label for="number">Enter a number</label> <br>
-        <input type="number" placeholder="enter a number" id="number"> <br> <br>
+        <input type="number" placeholder="enter a number" id="number" min="1" max="1000"> <br> <br>
 
 
         <!-- when you have a button in a form and you don't explicitly say "don't submit the form", it will submit the form to the destination spcified in the action -->
@@ -45,12 +45,96 @@
 
         <!-- can also make a submit button using input -->
         <!-- change name of button using value -->
-        <input type="submit" value="input button" >
+        <input type="submit" value="input button">
 
     </form>
 
     <!-- however if the button is outside of the form, it does nothing -->
     <button>Button outside of form</button>
+
+
+    <!-- more imputs -->
+    <h2>More inputs</h2>
+
+    <form action="/birds">
+
+        <label for="agree">I agree to terms and services</label>
+        <input type="checkbox" name="agree_tos" id="agree">
+        <p>
+
+            <label for="xs">xtra small</label>
+            <input type="radio" name="size" id="xs" value="xs">
+
+            <label for="s">small</label>
+            <input type="radio" name="size" id="s" value="s">
+
+            <label for="m">medium</label>
+            <input type="radio" name="size" id="m" value="m">
+
+            <label for="l">large</label>
+            <input type="radio" name="size" id="l" value="l">
+
+
+        <p>
+
+            <label for="meal">Please select a entree</label>
+
+            <select name="meal" id="meal">
+
+                <option value="">--Please choose a option--</option>
+                <option value="fish">fish</option>
+                <option value="steak">steak</option>
+                <option value="chicken">chicken</option>
+            </select>
+
+        </p>
+
+        <p><label for="cheese">amount of cheese</label>
+            <input type="range" name="cheese" id="cheese" min="1" max="10" value="6">
+        </p>
+
+        <p>
+
+            <label for="request">Any special requests?</label>
+            <textarea name="requests" id="request" cols="100" rows="10" placeholder="Type something here"></textarea>
+
+        </p>
+
+
+        <button>Submit</button>
+
+    </form>
+
+    <h2>Validations</h2>
+
+    <form action="dummy/">
+
+        <label for="first">First Name</label>
+        <input type="text" name="firstname" id="first" placeholder="First Name" required>
+
+        <br>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" minlength="7" maxlength="20" required>
+
+        <br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Email" required>
+
+        <br>
+        <label for="url">URL</label>
+        <input type="url" id="url" placeholder="url" required>
+
+
+        <button>Submit</button>
+
+
+
+
+
+    </form>
+
+
 
 </body>
 
